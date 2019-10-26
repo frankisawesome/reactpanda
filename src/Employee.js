@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import "./employee.css"
 import { Button } from 'react-bootstrap';
+import { Nav} from './nav'
 
 export function Employee() {
     const [music, setMusic] = useState(3)
@@ -32,7 +33,7 @@ export function Employee() {
             stress: stress,
             cleanliness: cleanliness
         })
-        
+
         fetch('http://localhost:3001/surveys/new', {
             method: 'POST',
             headers: {
@@ -55,12 +56,13 @@ export function Employee() {
 
     return (
         <div className="employee">
+            <Nav />
             <Form>
-                <Form.Label>{questions[0]}</Form.Label>
+                <Form.Label class="qs">{questions[0]}</Form.Label>
                 <input value={music} onChange={handleMusic}/> (1-5)<br />
-                <Form.Label>{questions[1]}</Form.Label>
+                <Form.Label class="qs">{questions[1]}</Form.Label>
                 <input value={stress} onChnage={handleStress}/> (1-5)<br />
-                <Form.Label>{questions[2]}</Form.Label>
+                <Form.Label class="qs">{questions[2]}</Form.Label>
                 <input value={cleanliness} onChange={handleClean} /> (1-5)<br />
             </Form>
             <Button variant="primary" onClick={handleSubmit}>Submit</Button>

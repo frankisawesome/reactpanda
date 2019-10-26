@@ -1,4 +1,10 @@
 .employee {
     text-align: center;
-    margin-top: 20px;
+}
+
+.qs {
+    font-size: 3rem;
+    display: block;
+    font-family: 'Open Sans';
+    color:#586170;
 }

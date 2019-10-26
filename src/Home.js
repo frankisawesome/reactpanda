@@ -1,13 +1,14 @@
 import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Nav } from './nav'
 
 export function Home() {
     return (
-        <Jumbotron>
-        <h1>Survey Panda</h1>
+        <div>
+        <Nav />
         <p>
-          Collects employee feedback anonymously and provide a clear dashboard to employers.
+          Choose the link that applies to you
         </p>
         <p>
           <Link variant="primary" to="/employee">Employee</Link>
@@ -15,6 +16,6 @@ export function Home() {
         <p>
           <Link variant="primary" to="/employer">Employer</Link>
         </p>
-      </Jumbotron>
+      </div>
     )
 }

@@ -1,0 +1,10 @@
+div {
+    text-align: center;
+}
+
+div h2 {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    color: #3B3E4A;
+    font-size: 60px;
+}
