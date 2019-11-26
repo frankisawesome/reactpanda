@@ -9,7 +9,6 @@ export function Nav ()
     return(
         <nav>
             <Link to="/"><FigureImage src={panda} height={140}/></Link>
-            <h1>Survey Panda</h1>
         </nav>
     )
 }

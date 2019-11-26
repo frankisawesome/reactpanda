@@ -34,7 +34,7 @@ export function Employee() {
             cleanliness: cleanliness
         })
 
-        fetch('http://localhost:3001/surveys/new', {
+        fetch('http://52.63.127.93:3000/surveys/new', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

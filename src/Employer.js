@@ -10,7 +10,7 @@ export function Employer() {
     const [total, setTotal] = useState(0);
 
     useEffect(() => {
-        fetch('http://localhost:3001/surveys/music', { method: 'GET' })
+        fetch('http://52.63.127.93:3000/surveys/music', { method: 'GET' })
             .then((res) => {
                 return res.json()
             })
@@ -21,7 +21,7 @@ export function Employer() {
                 console.log(err.toString())
             })
 
-        fetch('http://localhost:3001/surveys/stress', { method: 'GET' })
+        fetch('http://52.63.127.93:3000/surveys/stress', { method: 'GET' })
             .then((res) => {
                 return res.json()
             })
@@ -32,7 +32,7 @@ export function Employer() {
                 console.log(err.toString())
             })
 
-        fetch('http://localhost:3001/surveys/cleanliness', { method: 'GET' })
+        fetch('http://52.63.127.93:3000/surveys/cleanliness', { method: 'GET' })
             .then((res) => {
                 return res.json()
             })
@@ -43,7 +43,7 @@ export function Employer() {
                 console.log(err.toString())
             })
         
-            fetch('http://localhost:3001/surveys/total', { method: 'GET' })
+            fetch('http://52.63.127.93:3000/surveys/total', { method: 'GET' })
             .then((res) => {
                 return res.json()
             })
@@ -59,13 +59,13 @@ export function Employer() {
         <div>
             <Nav />
             <h2>Insight From {total} Employees</h2>
-            <Gauge value={music} label="Music" color="#359CBF"/>
-        <Gauge value={stress} label="Stress" color="#FE9400"/>
-        <Gauge value={cleanliness} label="Cleanliness" color="#92C731"/>
+            <Gauge value={music} label="Shift Sentiment" color="#359CBF"/>
+        <Gauge value={stress} label="Workload Perception" color="#FE9400"/>
+        <Gauge value={cleanliness} label="Support Perception" color="#92C731"/>
         <h2>Employee Insight From This Month</h2>
-            <Gauge value={56.2} label="Music" color="#3182D6"/>
-        <Gauge value={88.5} label="Stress" color="#E8A20C"/>
-        <Gauge value={44.7} label="Cleanliness" color="#DEDE2C"/>
+            <Gauge value={56.2} label="Shift Sentiment" color="#3182D6"/>
+        <Gauge value={88.5} label="Workload Perception" color="#E8A20C"/>
+        <Gauge value={44.7} label="Support Perception" color="#DEDE2C"/>
         </div>
     )
 }
